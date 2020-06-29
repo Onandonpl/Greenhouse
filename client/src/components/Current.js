@@ -15,7 +15,7 @@ const Current = (props) => {
   const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
   const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
 
-  if (!weather || !rain["1h"]) {
+  if (!weather || rain["1h"] === undefined) {
     return <span>Loading...</span>;
   }
   const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
