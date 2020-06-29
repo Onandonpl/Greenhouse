@@ -1,0 +1,22 @@
+@import './App.scss';
+@import './typography.scss';
+@import '../components/dashboard.scss';
+@import './page.scss';
+@import './sensor.scss';
+@import './slider.scss';
+@import './box.scss';
+@import './measurments.scss';
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(18, 20, 29);
+
+}

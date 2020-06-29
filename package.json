@@ -1,0 +1,27 @@
+{
+  "name": "greenhouse",
+  "version": "1.0.0",
+  "description": "My weather station with greenhouse",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Onandon",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
+    "chartjs-plugin-streaming": "^1.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "mqtt": "^4.1.0",
+    "nodemon": "^1.19.4",
+    "react-chartjs-2": "^2.9.0"
+  }
+}
