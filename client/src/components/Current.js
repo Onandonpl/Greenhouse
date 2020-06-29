@@ -15,10 +15,9 @@ const Current = (props) => {
   const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
   const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
 
-  if (!weather) {
+  if (!weather || !rain["1h"]) {
     return <span>Loading...</span>;
   }
-  console.log(rain["1h"]);
   const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
   return (
     <div className="current__box">
