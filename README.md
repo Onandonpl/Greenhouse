@@ -10,4 +10,4 @@
 -Heroku
 -Esp8266.
 
-[screen](readme__pic/ss.png)
+[screen](readme__pic/weather.png)
