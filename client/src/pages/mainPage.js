@@ -9,8 +9,6 @@ const mqtt = require("mqtt");
 
 var options = {
   protocol: "mqtts",
-  // clientId uniquely identifies client
-  // choose any string you wish
   qos: 0,
   clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8),
 };
@@ -67,10 +65,10 @@ class mainPage extends Component {
       });
   }
   ///////////////////
-  handleLedon = () => {
+  handleOn = () => {
     client.publish("esp/greenhouse/ONOF", "1");
   };
-  handleLedoff = () => {
+  handleOff = () => {
     client.publish("esp/greenhouse/ONOF", "0");
   };
 
@@ -98,8 +96,7 @@ class mainPage extends Component {
     } = this.state;
     return (
       <div className="dashboard">
-        {/* <button onClick={this.handleLedon}>on</button>
-        <button onClick={this.handleLedoff}>of</button> */}
+
 
         <div className="dashboard__controller ">
           <div className="dashboard__current ">
