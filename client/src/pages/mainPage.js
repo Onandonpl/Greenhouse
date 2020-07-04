@@ -45,7 +45,7 @@ class mainPage extends Component {
     const api = "84fa4b467e05b36efdb43de007e33ba1";
 
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=54.53921&lon=17.75012&exclude=minutely&units=metric&appid=${api}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=54.379283704009076&lon=18.388554336226687&exclude=minutely&units=metric&appid=${api}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -96,8 +96,6 @@ class mainPage extends Component {
     } = this.state;
     return (
       <div className="dashboard">
-
-
         <div className="dashboard__controller ">
           <div className="dashboard__current ">
             <Current data={dataCurrent} />
